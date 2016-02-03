@@ -50,3 +50,17 @@ mongoose.model('Location', locationSchema, 'Locations');
 //     closed: true
 //   }]
 // })
+
+
+
+
+
+// db.locations.update({ name: 'Starcups'}, { $push:
+//   { reviews: { author: 'Simon Holmes',
+// id: ObjectId(),
+// rating: 5,
+// timestamp: new Date("Jul 16, 2013"),
+// reviewText: "What a great place. I can't say enough good things about it."
+// }
+// }
+// })

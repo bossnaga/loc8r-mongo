@@ -1,4 +1,4 @@
-# Ch3: test
+# Ch3
   - save-dev nodemon and use for npm start
   - create app_server/
   - mv views, routes
@@ -140,3 +140,71 @@ require Mongoose
 
 add location Schema
 use control data as model
+add Schema with validations
+
+
+  coords: {type: [Number], index: '2dsphere'}
+
+
+sub documents
+
+create model
+
+
+
+shell
+show dbs
+
+use [db name]
+show collections
+
+
+db.collectionName.find(queryObject)
+
+
+
+
+use loc8r
+
+
+
+add sub-document with update
+
+use mongolab
+
+
+heroku addons:create mongolab
+
+Getting your connection URI
+  heroku config | grep MONGOLAB_URI
+
+  mongodb://heroku_0h39l9td:ettum3953j7gbghq7i9quql2pl@ds055485.mongolab.com:55485/heroku_0h39l9td
+
+heroku addons:open mongolab
+
+https://github.com/mongolab/mongodb-driver-examples/blob/master/nodejs/mongooseSimpleExample.js
+
+------------
+
+npm install mongoose
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+
+
+--==
+heroku config:get MONGOLAB_URI
+
+==--
+
+mkdir -p ~/tmp/mongodump
+
+DUMPING THE DATA FROM THE DEVELOPMENT DATABASE
+  mongodump -h localhost:27017 -d Loc8r -o ~/tmp/mongodump
+
+RESTORING THE DATA TO YOUR LIVE DATABASE
+  mongorestore -h ds055485.mongolab.com:55485 -d heroku_0h39l9td -u heroku_0h39l9td -p ettum3953j7gbghq7i9quql2pl ~/tmp/mongodump/Loc8r
+
+
+
+env production in db.js
