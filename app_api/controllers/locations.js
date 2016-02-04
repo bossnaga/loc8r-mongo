@@ -8,21 +8,22 @@ module.exports.locationsCreate = function(req, res) {
 };
 
 module.exports.locationsReadOne = function(req, res) {
-  console.log("hug")
   if (req.params && req.params.locationid) {
     Loc
+      // .find({_id: mongoose.Types.ObjectId(req.params.locationid)})
       .findById(req.params.locationid)
       .exec(function(err, location) {
         if (!location) {
           res.status(404).json({"message": "loc id not found"});
           return;
         } else if (err) {
-            res.status(404).json(err);
+          res.status(404).json(err);
           return;
         }
         res.status(200).json(location);
       });
   } else {
+    console.log("pug")
     res.status(404).json({"message": "no loc id in req"});
   }
 };

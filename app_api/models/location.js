@@ -24,7 +24,7 @@ var locationSchema = new mongoose.Schema({
   reviews: [reviewSchema]
 });
 
-mongoose.model('Location', locationSchema, 'Locations');
+mongoose.model('Location', locationSchema);
 
 
 
@@ -91,4 +91,3 @@ mongoose.model('Location', locationSchema, 'Locations');
 //     closed: true
 //   }]
 // })
-//

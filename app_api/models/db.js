@@ -1,5 +1,5 @@
 var mongoose = require( 'mongoose' );
-var dbURI = 'mongodb://localhost/Loc8r';
+var dbURI = 'mongodb://localhost/loc8r';
 
 if (process.env.NODE_ENV === 'production') {
   dbURI = "mongodb://heroku_0h39l9td:ettum3953j7gbghq7i9quql2pl@ds055485.mongolab.com:55485/heroku_0h39l9td";
